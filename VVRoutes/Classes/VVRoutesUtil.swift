@@ -15,8 +15,8 @@ open class VVRoutesUtil {
     }
 
     public class func present(_ vc: UIViewController) {
-        let nv = currentTopViewController()
-        nv.present(nv, animated: true)
+        let vc = currentTopViewController()
+        vc.present(vc, animated: true)
     }
 
     /// 获取当前页面
