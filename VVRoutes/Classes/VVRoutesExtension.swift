@@ -22,7 +22,7 @@ extension String {
     }
 
     func toURLDecodedString() -> String? {
-        let input = HDRoutes.shouldDecodePlusSymbols ? replacingOccurrences(of: "+", with: " ", options: [String.CompareOptions.caseInsensitive], range: startIndex ..< endIndex) : self
+        let input = VVRoutes.shouldDecodePlusSymbols ? replacingOccurrences(of: "+", with: " ", options: [String.CompareOptions.caseInsensitive], range: startIndex ..< endIndex) : self
         return input.removingPercentEncoding
     }
 }

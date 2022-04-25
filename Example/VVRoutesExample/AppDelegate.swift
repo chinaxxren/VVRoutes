@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         routes?.addRoute(pattern: "/login", handler: { (params) -> Bool in
             let user = params["user"]
             let vc = SecondController(user: user as! User)
-            VVRouteUtil.push(vc)
+            VVRoutesUtil.push(vc)
             return true
         })
         

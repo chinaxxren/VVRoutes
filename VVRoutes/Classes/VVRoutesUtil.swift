@@ -6,7 +6,7 @@
 
 import UIKit
 
-open class VVRouteUtil {
+open class VVRoutesUtil {
     // MARK: - public methods
 
     public class func push(_ vc: UIViewController) {

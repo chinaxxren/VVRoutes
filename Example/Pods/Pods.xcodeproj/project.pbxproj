@@ -12,8 +12,8 @@
 		2351906971A4FD3907D7FB772B6A5260 /* VVRoutes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C516FAF0F793AF42B5DE04443A3E /* VVRoutes-dummy.m */; };
 		4691DC8E11753B1FBA1AFEEEC08681B8 /* VVRoutes-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28E7CBFE6213F36F2E8E8C13FC5D8DB4 /* VVRoutes-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CF049D2C00F6A91DA06A8B8511061A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8B0B88DA5D3FEAF31FF8086BBA95F50F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234214579752C882B423C96A269F722 /* Extension.swift */; };
-		8F7912C754997BC641DD90100210D72D /* VVRouteUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0514E0A6710F47D54F22C6E7C1F7EE /* VVRouteUtil.swift */; };
+		8B0B88DA5D3FEAF31FF8086BBA95F50F /* VVRoutesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234214579752C882B423C96A269F722 /* VVRoutesExtension.swift */; };
+		8F7912C754997BC641DD90100210D72D /* VVRoutesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0514E0A6710F47D54F22C6E7C1F7EE /* VVRoutesUtil.swift */; };
 		916ED00D0169CD787A7B41B4A43C4331 /* Pods-VVRoutesExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BAFDDDAC6C8485C75C9E5150D5A861B /* Pods-VVRoutesExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F43D511B3DFF99C99C0B8EE1C1A088AC /* VVRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBCAB489DA72EA0FD5799D123DF3D5B /* VVRoutes.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0234214579752C882B423C96A269F722 /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = VVRoutes/Classes/Extension.swift; sourceTree = "<group>"; };
+		0234214579752C882B423C96A269F722 /* VVRoutesExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VVRoutesExtension.swift; path = VVRoutes/Classes/VVRoutesExtension.swift; sourceTree = "<group>"; };
 		136C174A327831B748F3F900A740FDB7 /* VVRoutes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VVRoutes.release.xcconfig; sourceTree = "<group>"; };
 		1BAFDDDAC6C8485C75C9E5150D5A861B /* Pods-VVRoutesExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VVRoutesExample-umbrella.h"; sourceTree = "<group>"; };
 		28E7CBFE6213F36F2E8E8C13FC5D8DB4 /* VVRoutes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VVRoutes-umbrella.h"; sourceTree = "<group>"; };
@@ -43,9 +43,9 @@
 		955048C41F23BBFF88FFAB01CDA9D627 /* VVRoutes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VVRoutes.debug.xcconfig; sourceTree = "<group>"; };
 		9894E33CB41E187B58B92979542D8D92 /* Pods-VVRoutesExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VVRoutesExample-Info.plist"; sourceTree = "<group>"; };
 		98B7C516FAF0F793AF42B5DE04443A3E /* VVRoutes-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VVRoutes-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E0514E0A6710F47D54F22C6E7C1F7EE /* VVRouteUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VVRouteUtil.swift; path = VVRoutes/Classes/VVRouteUtil.swift; sourceTree = "<group>"; };
-		A08078A75E6C9A85A0AED594DBA14D23 /* VVRoutes.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = VVRoutes.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0514E0A6710F47D54F22C6E7C1F7EE /* VVRoutesUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VVRoutesUtil.swift; path = VVRoutes/Classes/VVRoutesUtil.swift; sourceTree = "<group>"; };
+		A08078A75E6C9A85A0AED594DBA14D23 /* VVRoutes.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VVRoutes.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A26ABC91ED19D0F1AE92B31D2D0FDDE4 /* VVRoutes.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VVRoutes.modulemap; sourceTree = "<group>"; };
 		A9E9C5580CAAF5AB51CAC9113FCC9B61 /* Pods-VVRoutesExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VVRoutesExample"; path = Pods_VVRoutesExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA53C14791A8DF244A36B258122E11C2 /* Pods-VVRoutesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VVRoutesExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,9 +161,9 @@
 		F4B616F7B030AA2BC7EC74C24C847557 /* VVRoutes */ = {
 			isa = PBXGroup;
 			children = (
-				0234214579752C882B423C96A269F722 /* Extension.swift */,
+				0234214579752C882B423C96A269F722 /* VVRoutesExtension.swift */,
 				FBBCAB489DA72EA0FD5799D123DF3D5B /* VVRoutes.swift */,
-				9E0514E0A6710F47D54F22C6E7C1F7EE /* VVRouteUtil.swift */,
+				9E0514E0A6710F47D54F22C6E7C1F7EE /* VVRoutesUtil.swift */,
 				2A192D879128DAAD4B54A500344F8C52 /* Pod */,
 				C4F3152CBFD1096621AF2AC2D8846975 /* Support Files */,
 			);
@@ -289,10 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B0B88DA5D3FEAF31FF8086BBA95F50F /* Extension.swift in Sources */,
+				8B0B88DA5D3FEAF31FF8086BBA95F50F /* VVRoutesExtension.swift in Sources */,
 				F43D511B3DFF99C99C0B8EE1C1A088AC /* VVRoutes.swift in Sources */,
 				2351906971A4FD3907D7FB772B6A5260 /* VVRoutes-dummy.m in Sources */,
-				8F7912C754997BC641DD90100210D72D /* VVRouteUtil.swift in Sources */,
+				8F7912C754997BC641DD90100210D72D /* VVRoutesUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

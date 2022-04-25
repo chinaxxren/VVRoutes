@@ -180,7 +180,7 @@ open class VVRoutes {
 
         if let optionalRoutePatterns = optionalRoutePatterns, optionalRoutePatterns.count > 0 {
             for route in optionalRoutePatterns {
-                VVRouteUtil.printLog("Automatically created optional route: \(route)")
+                VVRoutesUtil.printLog("Automatically created optional route: \(route)")
                 registerRoute(pattern: route, priority: priority, handler: handler)
             }
             return
@@ -320,23 +320,23 @@ open class VVRoutes {
         }
     }
 
-    private func routeURL(_ url: URL?, parameters1: [String: Any]? = nil, executeRouteBlock: Bool) -> Bool {
+    private func routeURL(_ url: URL?, parameters: [String: Any]? = nil, executeRouteBlock: Bool) -> Bool {
         if url == nil {
             return false
         }
 
-        VVRouteUtil.printLog("Trying to route URL\(String(describing: url))")
+        VVRoutesUtil.printLog("Trying to route URL\(String(describing: url))")
 
         var didRoute: Bool = false
         let queryParameters = url?.query?.toURLParameterDict()
 
-        VVRouteUtil.printLog("Parsed query parameters:\(String(describing: queryParameters))")
+        VVRoutesUtil.printLog("Parsed query parameters:\(String(describing: queryParameters))")
 
         let fragmentParameters = url?.fragment?.toURLParameterDict()
-        VVRouteUtil.printLog("Parsed fragment parameters:\(String(describing: fragmentParameters))")
+        VVRoutesUtil.printLog("Parsed fragment parameters:\(String(describing: fragmentParameters))")
 
         let fragmentQueryParameters = url?.fragmentQuery()?.toURLParameterDict()
-        VVRouteUtil.printLog("Parsed fragment query parameters:\(String(describing: fragmentQueryParameters))")
+        VVRoutesUtil.printLog("Parsed fragment query parameters:\(String(describing: fragmentQueryParameters))")
 
         let filterSlashesPredicate = NSPredicate(format: "NOT SELF like '/'")
         let components = url?.pathComponents ?? [String]()
@@ -355,13 +355,13 @@ open class VVRoutes {
             }
         }
 
-        VVRouteUtil.printLog("URL path components:\(String(describing: pathComponents))")
-        VVRouteUtil.printLog("URL fragment components:\(String(describing: fragmentComponents))")
+        VVRoutesUtil.printLog("URL path components:\(String(describing: pathComponents))")
+        VVRoutesUtil.printLog("URL fragment components:\(String(describing: fragmentComponents))")
 
         for route in routes {
             let matchParameters = route.parametersForURL(url, pathComponents: pathComponents, fragmentComponents: fragmentComponents)
             if matchParameters != nil {
-                VVRouteUtil.printLog("Successfully matched:\(String(describing: route))")
+                VVRoutesUtil.printLog("Successfully matched:\(String(describing: route))")
                 if !executeRouteBlock {
                     return true
                 }
@@ -395,7 +395,7 @@ open class VVRoutes {
                 if let strongParentRoutesController = route.parentRoutesController {
                     finalParameters[kVVRouteNamespaceKey] = strongParentRoutesController.namespaceKey
                 }
-                VVRouteUtil.printLog("Final parameters are:\(String(describing: finalParameters))")
+                VVRoutesUtil.printLog("Final parameters are:\(String(describing: finalParameters))")
                 if let result = route.block?(finalParameters) {
                     didRoute = result
                 }
@@ -405,11 +405,11 @@ open class VVRoutes {
             }
         }
         if !didRoute {
-            VVRouteUtil.printLog("Could not find a matching route, returning NO")
+            VVRoutesUtil.printLog("Could not find a matching route, returning NO")
         }
 
         if !didRoute, shouldFallbackToGlobalRoutes, !_isGlobalRoutesController() {
-            VVRouteUtil.printLog("Falling back to global routes...")
+            VVRoutesUtil.printLog("Falling back to global routes...")
             if let result = VVRoutes.globalRoutes()?.routeURL(url, parameters: parameters, executeRouteBlock: executeRouteBlock) {
                 didRoute = result
             }
@@ -493,7 +493,7 @@ open class VVRoutes {
             }
         }
         if parseError {
-            VVRouteUtil.printLog("[JLRoutes]: Parse error, unsupported route: \(routePattern)")
+            VVRoutesUtil.printLog("[JLRoutes]: Parse error, unsupported route: \(routePattern)")
             return nil
         }
 
