@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95371FF822D97F230087236A"
-               BuildableName = "HDRoutesExample.app"
+               BuildableName = "VVRoutesExample.app"
                BlueprintName = "VVRoutesExample"
                ReferencedContainer = "container:VVRoutesExample.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95371FF822D97F230087236A"
-            BuildableName = "HDRoutesExample.app"
+            BuildableName = "VVRoutesExample.app"
             BlueprintName = "VVRoutesExample"
             ReferencedContainer = "container:VVRoutesExample.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95371FF822D97F230087236A"
-            BuildableName = "HDRoutesExample.app"
+            BuildableName = "VVRoutesExample.app"
             BlueprintName = "VVRoutesExample"
             ReferencedContainer = "container:VVRoutesExample.xcodeproj">
          </BuildableReference>

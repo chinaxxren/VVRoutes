@@ -7,30 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		323D0812EB377CF69D955C73 /* Pods_VVRoutesExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F6FBDCEA81BAC02F6F6BEA /* Pods_VVRoutesExample.framework */; };
 		8299D2972815B67800E4E7FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8299D2962815B67800E4E7FE /* User.swift */; };
 		8299D2992815B7C300E4E7FE /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8299D2982815B7C300E4E7FE /* SecondController.swift */; };
 		95371FFD22D97F230087236A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95371FFC22D97F230087236A /* AppDelegate.swift */; };
 		95371FFF22D97F230087236A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95371FFE22D97F230087236A /* ViewController.swift */; };
 		9537200422D97F280087236A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9537200322D97F280087236A /* Assets.xcassets */; };
 		9537200722D97F280087236A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9537200522D97F280087236A /* LaunchScreen.storyboard */; };
-		FD0764EC72E1F7342C383994 /* Pods_HDRoutesExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E745FAEDF69AD9343F6B7BC2 /* Pods_HDRoutesExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		122FF71FCB7F335BF7052C25 /* Pods_HDRoutes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDRoutes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304415EE326A780C44AFE2D5 /* Pods-HDRoutes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutes.debug.xcconfig"; path = "Target Support Files/Pods-HDRoutes/Pods-HDRoutes.debug.xcconfig"; sourceTree = "<group>"; };
+		494F2010F7D6D78DC699310D /* Pods-VVRoutesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVRoutesExample.release.xcconfig"; path = "Target Support Files/Pods-VVRoutesExample/Pods-VVRoutesExample.release.xcconfig"; sourceTree = "<group>"; };
 		564CDDF0A79CB487CDD8309F /* Pods-HDRoutesExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutesExample.release.xcconfig"; path = "Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample.release.xcconfig"; sourceTree = "<group>"; };
 		7066FF1ADBC1B1613A91F4A6 /* Pods-HDRoutes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutes.release.xcconfig"; path = "Target Support Files/Pods-HDRoutes/Pods-HDRoutes.release.xcconfig"; sourceTree = "<group>"; };
 		8299D2962815B67800E4E7FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8299D2982815B7C300E4E7FE /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		8A0BE0EA013E2E786B8AD289 /* Pods-VVRoutesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVRoutesExample.debug.xcconfig"; path = "Target Support Files/Pods-VVRoutesExample/Pods-VVRoutesExample.debug.xcconfig"; sourceTree = "<group>"; };
 		95371FF922D97F230087236A /* VVRoutesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVRoutesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95371FFC22D97F230087236A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95371FFE22D97F230087236A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9537200322D97F280087236A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9537200622D97F280087236A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9537200822D97F280087236A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F6FBDCEA81BAC02F6F6BEA /* Pods_VVRoutesExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VVRoutesExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98E8A7A147FA576257B0732 /* Pods-HDRoutesExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDRoutesExample.debug.xcconfig"; path = "Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample.debug.xcconfig"; sourceTree = "<group>"; };
-		E745FAEDF69AD9343F6B7BC2 /* Pods_HDRoutesExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDRoutesExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD0764EC72E1F7342C383994 /* Pods_HDRoutesExample.framework in Frameworks */,
+				323D0812EB377CF69D955C73 /* Pods_VVRoutesExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +54,8 @@
 				7066FF1ADBC1B1613A91F4A6 /* Pods-HDRoutes.release.xcconfig */,
 				B98E8A7A147FA576257B0732 /* Pods-HDRoutesExample.debug.xcconfig */,
 				564CDDF0A79CB487CDD8309F /* Pods-HDRoutesExample.release.xcconfig */,
+				8A0BE0EA013E2E786B8AD289 /* Pods-VVRoutesExample.debug.xcconfig */,
+				494F2010F7D6D78DC699310D /* Pods-VVRoutesExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -60,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				122FF71FCB7F335BF7052C25 /* Pods_HDRoutes.framework */,
-				E745FAEDF69AD9343F6B7BC2 /* Pods_HDRoutesExample.framework */,
+				A8F6FBDCEA81BAC02F6F6BEA /* Pods_VVRoutesExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,15 +175,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VVRoutesExample/Pods-VVRoutesExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VVRoutesExample/Pods-VVRoutesExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HDRoutesExample/Pods-HDRoutesExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VVRoutesExample/Pods-VVRoutesExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7B168A4E8D46783BAA02A209 /* [CP] Check Pods Manifest.lock */ = {
@@ -197,7 +201,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HDRoutesExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VVRoutesExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -350,12 +354,12 @@
 		};
 		9537200C22D97F280087236A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B98E8A7A147FA576257B0732 /* Pods-HDRoutesExample.debug.xcconfig */;
+			baseConfigurationReference = 8A0BE0EA013E2E786B8AD289 /* Pods-VVRoutesExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
-				INFOPLIST_FILE = HDRoutesExample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VVRoutesExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,12 +373,12 @@
 		};
 		9537200D22D97F280087236A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 564CDDF0A79CB487CDD8309F /* Pods-HDRoutesExample.release.xcconfig */;
+			baseConfigurationReference = 494F2010F7D6D78DC699310D /* Pods-VVRoutesExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
-				INFOPLIST_FILE = HDRoutesExample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VVRoutesExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

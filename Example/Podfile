@@ -1,6 +1,6 @@
 use_frameworks!
 
-target 'HDRoutesExample' do
-  pod 'HDRoutes', :path => '../'
+target 'VVRoutesExample' do
+  pod 'VVRoutes', :path => '../'
 
 end

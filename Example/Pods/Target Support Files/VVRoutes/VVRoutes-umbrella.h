@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_HDRoutesExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_HDRoutesExampleVersionString[];
+FOUNDATION_EXPORT double VVRoutesVersionNumber;
+FOUNDATION_EXPORT const unsigned char VVRoutesVersionString[];
 

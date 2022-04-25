@@ -1,16 +1,16 @@
 PODS:
-  - HDRoutes (0.4.0)
+  - VVRoutes (0.0.1)
 
 DEPENDENCIES:
-  - HDRoutes (from `../`)
+  - VVRoutes (from `../`)
 
 EXTERNAL SOURCES:
-  HDRoutes:
+  VVRoutes:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HDRoutes: dc4b1264bbc7795df06efeb5ffe9c7ba32f09cc5
+  VVRoutes: 0e5daf56fc97713e26ffc591034dee87a9cf6f0d
 
-PODFILE CHECKSUM: b6e4643c8f8ba89994ed2951077b474ea7ab6d43
+PODFILE CHECKSUM: 4985839cce881cf2e7914c28fae7e0b18b5b032f
 
 COCOAPODS: 1.11.3

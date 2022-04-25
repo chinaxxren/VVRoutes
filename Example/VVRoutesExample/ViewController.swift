@@ -5,7 +5,7 @@
 
 
 import UIKit
-import HDRoutes
+import VVRoutes
 
 class ViewController: UIViewController {
     
@@ -24,6 +24,6 @@ class ViewController: UIViewController {
     @objc func doClick() {
         let user = User(name: "Name", age: 18)
 //        HDRoutes.routeURL(URL(string: "/login")!,parameters: ["user":user])
-        HDRoutes.openURL("/login",parameters: ["user":user])
+        VVRoutes.openURL("/login",parameters: ["user":user])
     }
 }

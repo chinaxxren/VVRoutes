@@ -1,0 +1,6 @@
+framework module VVRoutes {
+  umbrella header "VVRoutes-umbrella.h"
+
+  export *
+  module * { export * }
+}

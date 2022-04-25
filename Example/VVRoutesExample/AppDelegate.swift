@@ -5,7 +5,7 @@
 
 
 import UIKit
-import VVRoute
+import VVRoutes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: ViewController())
         window?.makeKeyAndVisible()
         
-        let routes = VVRoute.globalRoutes()
-        VVRoute.verboseLoggingEnabled = true
+        let routes = VVRoutes.globalRoutes()
+        VVRoutes.verboseLoggingEnabled = true
         
         routes?.addRoute(pattern: "/login", handler: { (params) -> Bool in
             let user = params["user"]
@@ -36,34 +36,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // VVRoute.verboseLoggingEnabled = true
 
-        VVRoute.routesForScheme("ViPay")?.addRoute(pattern: "/test/:opt(/a)(/b)(/c)", priority: 10, handler: { (params) -> Bool in
+        VVRoutes.routesForScheme("ViPay")?.addRoute(pattern: "/test/:opt(/a)(/b)(/c)", priority: 10, handler: { (params) -> Bool in
             print("打开测试页面\(params)")
             return true
         })
 
-        VVRoute.globalRoutes()?.addRoute(pattern: "/test1", handler: { (params) -> Bool in
+        VVRoutes.globalRoutes()?.addRoute(pattern: "/test1", handler: { (params) -> Bool in
             print("打开测试1页面\(params)")
             return true
         })
 
-        VVRoute.routesForScheme("ViPay")?.unmatchedURLHandler = { _, _, _ in
+        VVRoutes.routesForScheme("ViPay")?.unmatchedURLHandler = { _, _, _ in
             print("无法识别的 ViPay 路由")
         }
 
-        VVRoute.globalRoutes()?.unmatchedURLHandler = { _, _, _ in
+        VVRoutes.globalRoutes()?.unmatchedURLHandler = { _, _, _ in
             print("无法识别的路由")
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            _ = VVRoute.routeURL(URL(string: "ViPay://test/:opt?a=6")!, parameters: ["name": "wangwanjie", "number": 5_201_314])
+            _ = VVRoutes.routeURL(URL(string: "ViPay://test/:opt?a=6")!, parameters: ["name": "wangwanjie", "number": 5_201_314])
 
-            _ = VVRoute.routeURL(URL(string: "/test1?age=27#topic")!, parameters: ["name": "wangwanjie", "number": 5_201_314])
+            _ = VVRoutes.routeURL(URL(string: "/test1?age=27#topic")!, parameters: ["name": "wangwanjie", "number": 5_201_314])
 
-            _ = VVRoute.routeURL(URL(string: "ViPay://8978998798q")!)
-            _ = VVRoute.routeURL(URL(string: "jhkhjkkk")!)
+            _ = VVRoutes.routeURL(URL(string: "ViPay://8978998798q")!)
+            _ = VVRoutes.routeURL(URL(string: "jhkhjkkk")!)
         }
 
-        VVRoute.globalRoutes()?.setHandlerBlock({ (_) -> Bool in
+        VVRoutes.globalRoutes()?.setHandlerBlock({ (_) -> Bool in
             // ...
 
             true
@@ -73,6 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_: UIApplication, open url: URL, options _: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        return VVRoute.routeURL(url)
+        return VVRoutes.routeURL(url)
     }
 }

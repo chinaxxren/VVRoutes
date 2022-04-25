@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double HDRoutesVersionNumber;
-FOUNDATION_EXPORT const unsigned char HDRoutesVersionString[];
+FOUNDATION_EXPORT double Pods_VVRoutesExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_VVRoutesExampleVersionString[];
 
