@@ -6,18 +6,18 @@
 
 import UIKit
 
-public let kVVRouteWildcardComponentsKey = "VVRouteWildcardComponents"
-private let kVVRoutePatternKey = "VVRoutePattern"
-private let kVVRouteURLKey = "VVRouteURL"
-private let kVVRouteNamespaceKey = "VVRouteNamespace"
-private let kVVRouteGlobalNamespaceKey = "VVRouteGlobalNamespace"
+public let kVVRoutesWildcardComponentsKey = "VVRoutesWildcardComponents"
+private let kVVRoutesPatternKey = "VVRoutesPattern"
+private let kVVRoutesURLKey = "VVRoutesURL"
+private let kVVRoutesNamespaceKey = "VVRoutesNamespace"
+private let kVVRoutesGlobalNamespaceKey = "VVRoutesGlobalNamespace"
 
-public typealias VVRouteHanlderBlock = ([String: Any]) -> Bool
+public typealias VVRoutesHanlderBlock = ([String: Any]) -> Bool
 
 private class Route {
     weak var parentRoutesController: VVRoutes?
     var pattern: String!
-    var block: VVRouteHanlderBlock?
+    var block: VVRoutesHanlderBlock?
     var priority: Int = 0
     var patternPathComponents: [String]?
     var patternFragmentComponents: [String]?
@@ -122,7 +122,7 @@ private class Route {
                         components = newComponents
                     }
                 } else if patternComponent == "*" {
-                    variables[kVVRouteWildcardComponentsKey] = components[componentIndex..<components.count - componentIndex]
+                    variables[kVVRoutesWildcardComponentsKey] = components[componentIndex..<components.count - componentIndex]
                     isMatch = true
                     break
                 } else if patternComponent != URLComponent {
@@ -143,14 +143,14 @@ private class Route {
 
 extension Route: CustomStringConvertible {
     var description: String {
-        return "<VVRoute> - \(pattern ?? "") - (priority: \(priority))"
+        return "<VVRoutes> - \(pattern ?? "") - (priority: \(priority))"
     }
 }
 
 open class VVRoutes {
     private static var routeControllersMap = [String?: VVRoutes?]()
     private var routes = [Route]()
-    private var namespaceKey: String = kVVRouteGlobalNamespaceKey
+    private var namespaceKey: String = kVVRoutesGlobalNamespaceKey
 
     public static var verboseLoggingEnabled: Bool = false
     public static var shouldDecodePlusSymbols: Bool = true
@@ -175,7 +175,7 @@ open class VVRoutes {
 
     // MARK: - register && unregister
 
-    public func addRoute(pattern: String, priority: Int = 0, handler: @escaping VVRouteHanlderBlock) {
+    public func addRoute(pattern: String, priority: Int = 0, handler: @escaping VVRoutesHanlderBlock) {
         let optionalRoutePatterns = _optionalRoutesForPattern(pattern)
 
         if let optionalRoutePatterns = optionalRoutePatterns, optionalRoutePatterns.count > 0 {
@@ -189,7 +189,7 @@ open class VVRoutes {
         registerRoute(pattern: pattern, priority: priority, handler: handler)
     }
 
-    public func addRoutes(patterns: [String], handler: @escaping VVRouteHanlderBlock) {
+    public func addRoutes(patterns: [String], handler: @escaping VVRoutesHanlderBlock) {
         for pattern in patterns {
             addRoute(pattern: pattern, handler: handler)
         }
@@ -222,7 +222,7 @@ open class VVRoutes {
         routes.removeAll()
     }
 
-    public func setHandlerBlock(_ hanlderBlock: @escaping VVRouteHanlderBlock, forKeyedSubscript routePatten: String) {
+    public func setHandlerBlock(_ hanlderBlock: @escaping VVRoutesHanlderBlock, forKeyedSubscript routePatten: String) {
         addRoute(pattern: routePatten, handler: hanlderBlock)
     }
 
@@ -235,7 +235,7 @@ open class VVRoutes {
     }
 
     public static func globalRoutes() -> VVRoutes? {
-        return routesForScheme(kVVRouteGlobalNamespaceKey)
+        return routesForScheme(kVVRoutesGlobalNamespaceKey)
     }
 
     // MARK: - judge
@@ -282,10 +282,10 @@ open class VVRoutes {
     // MARK: - private methods
 
     private func _isGlobalRoutesController() -> Bool {
-        return namespaceKey == kVVRouteGlobalNamespaceKey
+        return namespaceKey == kVVRoutesGlobalNamespaceKey
     }
 
-    private func registerRoute(pattern: String, priority: Int, handler: @escaping VVRouteHanlderBlock) {
+    private func registerRoute(pattern: String, priority: Int, handler: @escaping VVRoutesHanlderBlock) {
         let route = Route()
         route.pattern = pattern
         route.priority = priority
@@ -389,11 +389,11 @@ open class VVRoutes {
                     finalParameters.mergeOther(parameters)
                 }
 
-                finalParameters[kVVRoutePatternKey] = route.pattern
-                finalParameters[kVVRouteURLKey] = url
+                finalParameters[kVVRoutesPatternKey] = route.pattern
+                finalParameters[kVVRoutesURLKey] = url
 
                 if let strongParentRoutesController = route.parentRoutesController {
-                    finalParameters[kVVRouteNamespaceKey] = strongParentRoutesController.namespaceKey
+                    finalParameters[kVVRoutesNamespaceKey] = strongParentRoutesController.namespaceKey
                 }
                 VVRoutesUtil.printLog("Final parameters are:\(String(describing: finalParameters))")
                 if let result = route.block?(finalParameters) {
