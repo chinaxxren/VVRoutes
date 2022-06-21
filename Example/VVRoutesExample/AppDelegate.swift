@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let routes = VVRoutes.globalRoutes()
         VVRoutes.verboseLoggingEnabled = true
         
-        routes?.addRoute(pattern: "/login", handler: { (params) -> Bool in
+        routes?.addRoute(pattern: "aa://login", handler: { (params) -> Bool in
             let user = params["user"]
             let vc = SecondController(user: user as! User)
             VVRoutesUtil.push(vc)
